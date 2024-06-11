@@ -30,7 +30,7 @@ public class PacienteService {
       return paciente;
     }
 
-    public void UpdatePriority(Long id, int newPriority) {
+    public void updatePriority(Long id, int newPriority) {
         Paciente paciente = pacienteRepository.findById(id).orElseThrow(() -> new RuntimeException("Paciente não encontrado"));
         paciente.setPriority(newPriority);
         pacienteRepository.save(paciente);
